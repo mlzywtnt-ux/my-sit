@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>تعلّم الفيزياء مع Houssam Medguedem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  color:#fff;
+  background:#0f172a;
+}
+.hidden{display:none}
+.center{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  height:100vh; text-align:center;
+}
+#splash{
+  background:linear-gradient(135deg,#064e3b,#022c22);
+}
+#splash img{width:150px;margin-bottom:15px}
+#splash h1{font-size:20px; line-height:1.5}
+
+.header{
+  background:#020617; padding:15px; text-align:center; font-size:22px;
+}
+.container{padding:15px}
+.btn{
+  width:100%; padding:14px; margin:8px 0; font-size:18px;
+  background:#1e40af; color:#fff; border:none; border-radius:10px;
+}
+.btn:hover{background:#2563eb; cursor:pointer;}
+.back{background:#334155}
+.card{
+  background:#020617; border-radius:12px; padding:12px; margin:10px 0;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
+.card h3{margin:6px 0}
+ul{padding-right:20px}
+.footer{opacity:.7; font-size:12px; text-align:center; margin-top:10px}
+</style>
+
+<script>
+setTimeout(()=>{
+  document.getElementById('splash').classList.add('hidden');
+  document.getElementById('home').classList.remove('hidden');
+},3000);
+
+function show(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+</head>
+
+<body>
+
+<!-- شاشة البداية -->
+<div id="splash" class="center page">
+  <img src="logo.png" alt="logo">
+  <h1>تعلّم الفيزياء<br>مع الأستاذ<br><b>Houssam Medguedem</b></h1>
+</div>
+
+<!-- الصفحة الرئيسية -->
+<div id="home" class="page hidden">
+  <div class="header">📘 فيزياء التعليم المتوسط</div>
+  <div class="container">
+    <button class="btn" onclick="show('y1')">الأولى متوسط</button>
+    <button class="btn" onclick="show('y2')">الثانية متوسط</button>
+    <button class="btn" onclick="show('y3')">الثالثة متوسط</button>
+    <button class="btn" onclick="show('y4')">الرابعة متوسط</button>
+    <div class="footer">© تطبيق تعليمي Houssam Medguedem</div>
+  </div>
+</div>
+
+<!-- الأولى متوسط -->
+<div id="y1" class="page hidden">
+  <div class="header">الأولى متوسط</div>
+  <div class="container">
+    <div class="card">
+      <h3>📚 الدروس</h3>
+      <ul>
+        <li>حالات المادة (صلبة – سائلة – غازية)</li>
+        <li>التحولات الفيزيائية للمادة</li>
+        <li>الحرارة ودرجة الحرارة</li>
+        <li>انتقال الحرارة (توصيل – حمل – إشعاع)</li>
+        <li>السكون والحركة</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎯 RAF</h3>
+      <ul>
+        <li>التمييز بين حالات المادة</li>
+        <li>شرح طرق انتقال الحرارة</li>
+        <li>الفرق بين السكون والحركة</li>
+        <li>استعمال أدوات القياس البسيطة</li>
+      </ul>
+    </div>
+    <button class="btn back" onclick="show('home')">⬅ رجوع</button>
+  </div>
+</div>
+
+<!-- الثانية متوسط -->
+<div id="y2" class="page hidden">
+  <div class="header">الثانية متوسط</div>
+  <div class="container">
+    <div class="card">
+      <h3>📚 الدروس</h3>
+      <ul>
+        <li>الدارة الكهربائية البسيطة</li>
+        <li>المولد والمستقبل</li>
+        <li>شدة التيار الكهربائي</li>
+        <li>التوتر الكهربائي</li>
+        <li>أخطار الكهرباء</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎯 RAF</h3>
+      <ul>
+        <li>تركيب دارة كهربائية صحيحة</li>
+        <li>قياس شدة التيار والتوتر</li>
+        <li>احترام قواعد السلامة</li>
+      </ul>
+    </div>
+    <button class="btn back" onclick="show('home')">⬅ رجوع</button>
+  </div>
+</div>
+
+<!-- الثالثة متوسط -->
+<div id="y3" class="page hidden">
+  <div class="header">الثالثة متوسط</div>
+  <div class="container">
+    <div class="card">
+      <h3>📚 الدروس</h3>
+      <ul>
+        <li>الكتلة الحجمية (الكثافة)</li>
+        <li>توازن الأجسام</li>
+        <li>الضوء (انتشار – انعكاس – انكسار)</li>
+        <li>الموجات</li>
+        <li>الصوت</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎯 RAF</h3>
+      <ul>
+        <li>حساب الكتلة الحجمية</li>
+        <li>تحديد شروط التوازن</li>
+        <li>تفسير ظواهر الضوء</li>
+        <li>التمييز بين أنواع الموجات</li>
+      </ul>
+    </div>
+    <button class="btn back" onclick="show('home')">⬅ رجوع</button>
+  </div>
+</div>
+
+<!-- الرابعة متوسط -->
+<div id="y4" class="page hidden">
+  <div class="header">الرابعة متوسط</div>
+  <div class="container">
+    <div class="card">
+      <h3>📚 الدروس</h3>
+      <ul>
+        <li>الشغل والطاقة</li>
+        <li>أشكال الطاقة وتحولاتها</li>
+        <li>التيار الكهربائي المستمر</li>
+        <li>المقاومة الكهربائية</li>
+        <li>قوانين الغازات</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎯 RAF</h3>
+      <ul>
+        <li>حساب الشغل والطاقة</li>
+        <li>تفسير تحولات الطاقة</li>
+        <li>تبسيط الدارات وحساب المقاومة المكافئة</li>
+        <li>تطبيق قوانين الغازات</li>
+      </ul>
+    </div>
+    <button class="btn back" onclick="show('home')">⬅ رجوع</button>
+  </div>
+</div>
+
+</body>
+</html>
